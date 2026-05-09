@@ -12,6 +12,10 @@ The system is deployed using Streamlit, allowing users to upload images and rece
 
 👉 https://fire-detection-cnn-d9ejbubagpxkpkpyqznjo2.streamlit.app/
 
+linkedIn Post:
+[<img width="1355" height="627" alt="image" src="https://github.com/user-attachments/assets/10f9e462-490f-432a-8be1-3288a0d8ba01" />](https://www.linkedin.com/posts/nasiru-armiyau-70b28a3a4_i-recently-built-an-end-to-end-fire-detection-ugcPost-7458866051582152704-iu90?utm_source=share&utm_medium=member_ios&rcm=ACoAAGL_J3sBTS8NKv2Ey80OQy_5XCeoMOFKXl4)
+
+
 🧠 Problem Statement
 
 Fire incidents in industrial environments such as oil & gas facilities can lead to severe damage, loss of life, and financial loss. This project aims to develop an AI-based system for early fire detection using image classification, improving response time and safety.
