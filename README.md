@@ -1,184 +1,102 @@
-📄 CNN FIRE DETECTION PROJECT REPORT (GUIDE-BASED ANSWERS)
-🧠 Phase 1: Problem Definition
-❓ What real-world Oil & Gas problem are you solving?
+🔥 Fire Detection System using CNN (PyTorch + Streamlit)
+📌 Project Overview
 
-The project solves the problem of early fire detection in industrial environments such as oil & gas facilities, where delayed detection can lead to severe accidents, equipment damage, and loss of life.
-
-❓ Why is this problem important?
-
-Fire incidents in industrial environments are highly dangerous because they spread quickly and are difficult to control once escalated. Early detection improves emergency response time and reduces risk.
-
-❓ What will your model predict?
-
-The model classifies images into:
+This project is a deep learning-based Fire Detection System built using a Convolutional Neural Network (CNN) in PyTorch. The model classifies images into two categories:
 
 🔥 Fire
 🌫 No Fire
-🗂️ Phase 2: Dataset Exploration
-❓ What type of data does it contain?
 
-The dataset contains RGB images representing fire and non-fire environments.
+The system is deployed using Streamlit, allowing users to upload images and receive real-time predictions with confidence scores.
 
-❓ What are input features and labels?
-Input features: Image pixels (RGB values)
-Labels: fire and nofire
-❓ Which dataset did you select?
+🌐 Live Demo
 
-The dataset used is a publicly available fire detection dataset (similar to Kaggle datasets) structured into training, validation, and testing folders.
+👉 https://fire-detection-cnn-d9ejbubagpxkpkpyqznjo2.streamlit.app/
 
-🧹 Phase 3: Data Preparation
-❓ How did you preprocess the dataset?
+🧠 Problem Statement
 
-The dataset was preprocessed by:
+Fire incidents in industrial environments such as oil & gas facilities can lead to severe damage, loss of life, and financial loss. This project aims to develop an AI-based system for early fire detection using image classification, improving response time and safety.
 
-Resizing images to 128 × 128 pixels
-Converting images to tensors
-Normalizing pixel values
-Using batch loading with DataLoader
-❓ How did you handle imbalance or noise?
+⚙️ Tech Stack
+Python 🐍
+PyTorch 🤖
+Convolutional Neural Networks (CNN)
+Streamlit 🌐
+Computer Vision 👁️
+📊 Model Performance
+Test Accuracy: ~93%
+High Recall for Fire Detection (important for safety systems)
+Reliable classification of fire vs no-fire images
+🏗️ Model Architecture
 
-The dataset was checked for class balance. Minor variations and noise were handled using generalization through CNN training and dataset splitting.
+The CNN model consists of:
 
-🧠 Phase 4: Model Design (CNN)
-❓ Why did you choose CNN?
+3 Convolutional Layers
+ReLU Activation Functions
+MaxPooling Layers
+Fully Connected Layers
+Dropout for Regularization
+Output Layer (2 classes: fire / nofire)
+🚀 Features
+Upload image for prediction
+Real-time fire detection
+Confidence score display
+Probability visualization
+Simple and interactive UI
+📂 Project Structure
+fire-detection-cnn/
+│
+├── app.py                     # Streamlit application
+├── fire_detection_model.pth   # Trained CNN model
+├── requirements.txt           # Dependencies
+├── README.md                  # Project documentation
+⚙️ Installation & Setup
+1. Clone the repository
+git clone https://github.com/nacyr/fire-detection-cnn.git
+cd fire-detection-cnn
+2. Install dependencies
+pip install -r requirements.txt
+3. Run the application
+streamlit run app.py
+📸 How It Works
+User uploads an image
+Image is preprocessed (resized and normalized)
+CNN model predicts class (fire / nofire)
+Output is displayed with confidence score
+🔥 Real-World Application
 
-A Convolutional Neural Network was chosen because it is highly effective for image classification tasks due to its ability to extract spatial and visual features.
+This system can be used in:
 
-❓ What is the architecture of your model?
-
-The model consists of:
-
-3 Convolutional layers
-ReLU activation functions
-MaxPooling layers
-Fully connected layers
-Dropout layer for regularization
-Output layer with 2 classes
-❓ Why this architecture?
-
-This architecture allows the model to progressively learn:
-
-edges
-textures
-shapes
-complex fire patterns
-🏋️ Phase 5: Training the Model
-❓ What loss function and optimizer were used?
-Loss function: CrossEntropyLoss
-Optimizer: Adam optimizer
-❓ How did training behave?
-Training accuracy improved steadily
-Validation accuracy followed similar trend
-Loss decreased consistently over epochs
-❓ Did you face overfitting?
-
-No severe overfitting was observed due to:
-
-Dropout layer
-Balanced dataset
-Proper validation split
-📊 Phase 6: Model Evaluation
-❓ What metrics were used?
-
-The model was evaluated using:
-
-Accuracy
-Precision
-Recall
-F1-score
-Confusion Matrix
-❓ How accurate is your model?
-
-The model achieved approximately 93% test accuracy.
-
-❓ What does the confusion matrix show?
-
-It shows:
-
-High correct classification of fire images
-High correct classification of no-fire images
-Few misclassifications
-Strong safety performance (high fire recall)
-🌐 Phase 7: Deployment (Streamlit)
-❓ How did you convert your model into an application?
-
-The trained CNN model was deployed using Streamlit by:
-
-Loading the trained .pth model
-Creating a web interface for image upload
-Running inference on uploaded images
-Displaying predictions in real-time
-❓ What inputs does your app accept?
-JPG
-PNG
-JPEG images
-❓ What outputs does it display?
-Predicted class (fire / nofire)
-Confidence score (%)
-Probability visualization chart
-🔍 Phase 8: Results & Insights
-❓ What patterns did your model learn?
-
-The model learned:
-
-Fire images contain bright orange/red regions
-Irregular and high-intensity patterns indicate fire
-No-fire images have stable textures and natural scenes
-❓ Key takeaways
-High recall ensures fire is rarely missed
-Model prioritizes safety over false alarms
-CNN effectively extracts visual patterns
-⚠️ Phase 9: Challenges & Improvements
-❓ What challenges did you encounter?
-Setting up PyTorch and Streamlit environment
-Model deployment issues
-File path and dependency errors
-Dataset preprocessing complexity
-❓ How can the model be improved?
-Use larger and more diverse dataset
-Apply data augmentation
-Use advanced architectures (ResNet, VGG)
-Improve UI design and performance
-🧠 Phase 10: Reflection
-❓ What did you learn?
-
-This project helped develop skills in:
-
-Deep learning using PyTorch
-CNN-based image classification
-Model evaluation techniques
-Streamlit deployment
-End-to-end AI system development
-❓ Real-world relevance
-
-This system is applicable in:
-
-Oil & gas safety monitoring
+Oil & Gas safety monitoring
 Industrial fire detection systems
-Smart surveillance systems
-Emergency response automation
-🚀 Deployment Requirement
-❓ How was Streamlit used?
+Smart surveillance cameras
+Emergency response systems
+📈 Key Learnings
+Building CNN models using PyTorch
+Image preprocessing techniques
+Model evaluation (accuracy, precision, recall)
+Deployment using Streamlit
+End-to-end AI system development
+⚠️ Limitations
+Performance depends on dataset quality
+May produce false positives in complex environments
+Requires improvement with larger datasets
+🚀 Future Improvements
+Integrate video-based fire detection
+Use advanced models (ResNet, EfficientNet)
+Improve UI design
+Add real-time camera detection
+Deploy on scalable cloud infrastructure
+🙏 Acknowledgements
 
-A Streamlit web application was created where users can upload images and receive real-time predictions from the trained CNN model.
+Special thanks to:
 
-💡 LinkedIn Reflection Task
+Open-source deep learning community
+Dataset providers
+AI/ML learning platforms
+👨‍💻 Author
 
-A professional post was created describing:
+Nasir Armiyau
 
-Problem solved (fire detection)
-Tools used (PyTorch, CNN, Streamlit)
-Model performance (93% accuracy)
-Challenges faced
-Lessons learned
+📌 Conclusion
 
-Screenshots of the system and deployment link were included, and relevant organizations were tagged.
-
-🏁 FINAL SUMMARY
-
-The project successfully demonstrates an end-to-end AI system that:
-
-Solves a real-world safety problem
-Uses deep learning (CNN)
-Evaluates performance using standard metrics
-Deploys a working web application using Streamlit
+This project demonstrates an end-to-end AI system for fire detection using deep learning. It successfully integrates model training, evaluation, and deployment into a real-world usable application.
